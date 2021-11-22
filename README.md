@@ -1,7 +1,4 @@
 <h1 align="center">  <strong>My Profile</strong> </h1>
-
-<br />
-
 <h3>If you have NPM installed you can connect with me directly via a terminal</h3>
 
 ### <strong>👇 Write this in your terminal</strong>
@@ -10,7 +7,7 @@
 npx croluy
 ```
 
-<br />
+<br/>
 
 ### <strong>🚀 Some infos</strong>
 

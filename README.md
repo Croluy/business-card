@@ -3,7 +3,7 @@
 
 <br />
 
-### <strong>👇 just hit this in your terminal</strong>
+### <strong>👇 Just hit this in your terminal</strong>
 
 ```bash
 npx croluy

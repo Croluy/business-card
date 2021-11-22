@@ -2,7 +2,7 @@
 
 <br />
 
-<h5>If you have NPM installed you can connect with me directly via a terminal</h5>
+<h3>If you have NPM installed you can connect with me directly via a terminal</h3>
 
 ### <strong>👇 Write this in your terminal</strong>
 

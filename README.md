@@ -16,4 +16,4 @@ npx croluy
 - 👋 Hi there, I’m @Croluy
 - 👀 I’m interested in Computer Science in general.
 - 🌱 I do enjoy several programming language like C, C++, Java, JS, PHP, Go and Python.
-- 📫 You can reach me on Telegram at ![@Croluy](https://t.me/croluy)
+- 📫 You can reach me on Telegram at [@Croluy](https://t.me/croluy)

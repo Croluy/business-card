@@ -1,5 +1,6 @@
 <h1 align="center">  <strong>My Profile</strong> </h1>
 ### <strong>If you have NPM installed you can connect with me directly via a terminal</strong>
+
 ### <strong>👇 Write this in your terminal</strong>
 
 ```bash

@@ -6,13 +6,14 @@
 ### <strong>👇 just hit this in your terminal</strong>
 
 ```bash
-npx rahikhan
+npx croluy
 ```
 
 <br />
 
 ### <strong>🚀 DEMO</strong>
 
-![demo.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1610360119791/rLM8MkTgG.gif)
-
-<br />
+- 👋 Hi there, I’m @Croluy
+- 👀 I’m interested in Computer Science in general.
+- 🌱 I do enjoy several programming language like C, C++, Java, JS, PHP, Go and Python.
+- 📫 You can reach me on Telegram at ![@Croluy](https://t.me/croluy)

@@ -1,13 +1,13 @@
 {
-    "name": "rahikhan",
-    "version": "2.2.2",
-    "author": "Rahi Khan <rahikhan360@gmail.com> (https://rahikhan.gtsb.io)",
-    "description": "A personal card for Rahi Khan",
+    "name": "Croluy",
+    "version": "1.0.0",
+    "author": "Croluy <croluy@fbi.ac>",
+    "description": "A personal card for Croluy",
     "main": "card.js",
     "bin": "./card.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/rahi-khan/npx_card.git"
+        "url": "https://github.com/Croluy/business-card.git"
     },
     "scripts": {
         "setup": "ncu -u && npm i",
@@ -29,7 +29,8 @@
         "npm card",
         "npx",
         "npx card",
-        "business card"
+        "business card",
+        "croluy"
     ],
     "license": "ISC"
 }

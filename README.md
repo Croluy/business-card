@@ -1,9 +1,10 @@
 <h1 align="center">  <strong>My Profile</strong> </h1>
-<h3 align="center"> Connect with me using my NPX Card directly via a terminal </h3>
 
 <br />
 
-### <strong>👇 Just hit this in your terminal</strong>
+<h5>If you have NPM installed you can connect with me directly via a terminal</h5>
+
+### <strong>👇 Write this in your terminal</strong>
 
 ```bash
 npx croluy

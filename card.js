@@ -65,7 +65,7 @@ const data = {
     labelWork: chalk.white.bold("        Info:"),
     labelLanguages: chalk.white.bold("Programming Languages:"),
     labelTelegram: chalk.white.bold("         Telegram:"),
-    labelGitHub: chalk.white.bold("        GitHub:"),
+    labelGitHub: chalk.white.bold("       GitHub:"),
     labelCard: chalk.white.bold("              Card:"),
 };
 

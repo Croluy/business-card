@@ -2,7 +2,7 @@
 <strong>If you have NPM installed, you can connect with me directly via a terminal</strong>
 
 ### <strong>👇 Write this in your terminal</strong>
-** Work in progress. Still not available. **
+<span color="red">** Work in progress. Still not available. **</span>
 
 ```bash
 npx croluy

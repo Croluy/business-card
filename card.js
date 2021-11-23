@@ -57,15 +57,15 @@ const questions = [
 const data = {
     name: chalk.bold.green(`                     ${user_name}`),
     work: `${chalk.white(`${job_title}`)}`,
-    telegram: chalk.gray("https://t.me/") + chalk.cyan(`${telegram_username}`),
-    github: chalk.gray("https://github.com/") + chalk.green(`${github_username}`),
+    telegram: chalk.cyan("https://t.me/") + chalk.cyan(`${telegram_username}`),
+    github: chalk.cyan("https://github.com/") + chalk.cyan(`${github_username}`),
     npx: chalk.red("npx") + " " + chalk.white(`${npx_card_handle}`),
-    languages: chalk.white(`${languages}`),
+    languages: chalk.blue(`${languages}`),
 
     labelWork: chalk.white.bold("        Info:"),
     labelLanguages: chalk.white.bold("Programming Languages:"),
-    labelTelegram: chalk.white.bold("      Telegram:"),
-    labelGitHub: chalk.white.bold("     GitHub:"),
+    labelTelegram: chalk.white.bold("         Telegram:"),
+    labelGitHub: chalk.white.bold("      GitHub:"),
     labelCard: chalk.white.bold("             Card:"),
 };
 

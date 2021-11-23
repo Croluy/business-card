@@ -2,7 +2,6 @@
 <strong>If you have NPM installed, you can connect with me directly via a terminal</strong>
 
 ### <strong>👇 Write this in your terminal</strong>
-<span color="red">** Work in progress. Still not available. **</span>
 
 ```bash
 npx croluy
@@ -12,7 +11,7 @@ npx croluy
 
 ### <strong>🚀 Some infos</strong>
 
-- 👋 Hi there, I’m @Croluy
+- 👋 Hi there, I’m [@croluy](https://github.com/Croluy)
 - 👀 I’m interested in Computer Science in general.
 - 🌱 I do enjoy several programming language like C, C++, Java, JS, PHP, Go and Python.
 - 📫 You can reach me on Telegram at [@croluy](https://t.me/croluy)

@@ -55,15 +55,15 @@ const questions = [
 ];
 
 const data = {
-    name: chalk.bold.green(`                  ${user_name}`),
+    name: chalk.bold.green(`                     ${user_name}`),
     work: `${chalk.white(`${job_title}`)}`,
     telegram: chalk.gray("https://t.me/") + chalk.cyan(`${telegram_username}`),
     github: chalk.gray("https://github.com/") + chalk.green(`${github_username}`),
     npx: chalk.red("npx") + " " + chalk.white(`${npx_card_handle}`),
     languages: chalk.white(`${languages}`),
 
-    labelWork: chalk.white.bold("       Info:"),
-    labelLanguages: chalk.white.bold(" Programming Languages:"),
+    labelWork: chalk.white.bold("        Info:"),
+    labelLanguages: chalk.white.bold("Programming Languages:"),
     labelTelegram: chalk.white.bold("      Telegram:"),
     labelGitHub: chalk.white.bold("     GitHub:"),
     labelCard: chalk.white.bold("             Card:"),
@@ -82,10 +82,10 @@ const me = boxen(
         ``,
         `${data.labelCard}  ${data.npx}`,
         ``,
-        `${chalk.italic("I'm always seeking new opportunities,")}`,
-        `${chalk.italic("my inbox is always open. Whether you have a")}`,
-        `${chalk.italic("question or just want to say hi, I will try ")}`,
-        `${chalk.italic("my best to get back to you!")}`,
+        `${chalk.italic("\tI'm always seeking new opportunities,")}`,
+        `${chalk.italic("\tmy inbox is always open. Whether you have a")}`,
+        `${chalk.italic("\tquestion or just want to say hi, I will try ")}`,
+        `${chalk.italic("\tmy best to get back to you!")}`,
     ].join("\n"),
     {
         margin: 1,

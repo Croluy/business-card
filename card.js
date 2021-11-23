@@ -8,7 +8,6 @@ const inquirer = require("inquirer");
 const clear = require("clear");
 const open = require("open");
 const fs = require("fs");
-//const request = require("request");
 const path = require("path");
 const ora = require("ora");
 const cliSpinners = require("cli-spinners");
@@ -58,19 +57,14 @@ const questions = [
 
 const data = {
     name: chalk.bold.green(`                  ${user_name}`),
-    // work: `${chalk.white("Software Engineer at")} ${chalk.hex("#2b82b2").bold("ClearTax")}`,
     work: `${chalk.white(`${job_title}`)}`,
     telegram: chalk.gray("https://t.me/") + chalk.cyan(`${telegram_username}`),
     github: chalk.gray("https://github.com/") + chalk.green(`${github_username}`),
-    linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue(`${linkedin_username}`),
-    web: chalk.cyan(`${personal_site}`),
     npx: chalk.red("npx") + " " + chalk.white(`${npx_card_handle}`),
 
-    labelWork: chalk.white.bold("       Work:"),
+    labelWork: chalk.white.bold("       Info:"),
     labelTelegram: chalk.white.bold("    Telegram:"),
     labelGitHub: chalk.white.bold("     GitHub:"),
-    labelLinkedIn: chalk.white.bold("   LinkedIn:"),
-    labelWeb: chalk.white.bold("        Web:"),
     labelCard: chalk.white.bold("       Card:"),
 };
 
@@ -82,8 +76,6 @@ const me = boxen(
         ``,
         `${data.labelTelegram}  ${data.telegram}`,
         `${data.labelGitHub}  ${data.github}`,
-        `${data.labelLinkedIn}  ${data.linkedin}`,
-        `${data.labelWeb}  ${data.web}`,
         ``,
         `${data.labelCard}  ${data.npx}`,
         ``,

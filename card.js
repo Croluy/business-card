@@ -24,6 +24,8 @@ const {
     github_username,
     npx_card_handle,
     job_title,
+    steam_username,
+    discord_username,
     languages,
 } = user_data;
 
@@ -59,6 +61,8 @@ const data = {
     work: `${chalk.white(`${job_title}`)}`,
     telegram: chalk.cyan("https://t.me/") + chalk.cyan(`${telegram_username}`),
     github: chalk.cyan("https://github.com/") + chalk.cyan(`${github_username}`),
+    steam: chalk.cyan("https://steamcommunity.com/id/") + chalk.cyan(`${steam_username}`),
+    discord: chalk.green(`${discord_username}`),
     npx: chalk.red("npx") + " " + chalk.white(`${npx_card_handle}`),
     languages: chalk.blue(`${languages}`),
 
@@ -66,6 +70,8 @@ const data = {
     labelLanguages: chalk.white.bold("Programming Languages:"),
     labelTelegram: chalk.white.bold("         Telegram:"),
     labelGitHub: chalk.white.bold("       GitHub:"),
+    labelSteam: chalk.white.bold("      Steam:"),
+    labelDiscord: chalk.white.bold("                Discord:"),
     labelCard: chalk.white.bold("              Card:"),
 };
 
@@ -79,6 +85,8 @@ const me = boxen(
         ``,
         `${data.labelTelegram}  ${data.telegram}`,
         `${data.labelGitHub}  ${data.github}`,
+        `${data.labelSteam}  ${data.steam}`,
+        `${data.labelDiscord} ${data.discord}`,
         ``,
         `${data.labelCard}  ${data.npx}`,
         ``,

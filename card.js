@@ -21,7 +21,7 @@ const user_data = JSON.parse(res);
 const {
     user_name,
     user_email,
-    twitter_username,
+    telegram_username,
     linkedin_username,
     github_username,
     personal_site,
@@ -36,44 +36,21 @@ const questions = [
     {
         type: "list",
         name: "action",
-        message: "What you want to do?",
+        message: "What do you wish to do next?",
         choices: [
             //// Send an email
             {
                 name: `Send me an ${chalk.green.bold("email")}?`,
                 value: () => {
                     open(`mailto:${user_email}`);
-                    console.log("\nDone, see you soon at inbox.\n");
-                },
-            },
-            //// Download Resume
-            {
-                name: `Download my ${chalk.magentaBright.bold("Resume")}?`,
-                value: () => {
-                    // cliSpinners.dots;
-                    const loader = ora({
-                        text: " Downloading Resume",
-                        spinner: cliSpinners.material,
-                    }).start();
-                    let pipe = request(`${resume_url}`).pipe(
-                        fs.createWriteStream(`./${npx_card_handle}-resume.html`)
-                    );
-                    pipe.on("finish", function () {
-                        let downloadPath = path.join(
-                            process.cwd(),
-                            `${npx_card_handle}-resume.html`
-                        );
-                        console.log(`\nResume Downloaded at ${downloadPath} \n`);
-                        open(downloadPath);
-                        loader.stop();
-                    });
+                    console.log("\nAwesome, see you soon at inbox.\n");
                 },
             },
             //// Quit
             {
-                name: "Just quit.",
+                name: "Quit this menu.",
                 value: () => {
-                    console.log("Hasta la vista.\n");
+                    console.log("Thanks for dropping by.\n-Croluy\n");
                 },
             },
         ],
@@ -84,14 +61,14 @@ const data = {
     name: chalk.bold.green(`                  ${user_name}`),
     // work: `${chalk.white("Software Engineer at")} ${chalk.hex("#2b82b2").bold("ClearTax")}`,
     work: `${chalk.white(`${job_title}`)}`,
-    twitter: chalk.gray("https://twitter.com/") + chalk.cyan(`${twitter_username}`),
+    telegram: chalk.gray("https://t.me/") + chalk.cyan(`${telegram_username}`),
     github: chalk.gray("https://github.com/") + chalk.green(`${github_username}`),
     linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue(`${linkedin_username}`),
     web: chalk.cyan(`${personal_site}`),
     npx: chalk.red("npx") + " " + chalk.white(`${npx_card_handle}`),
 
     labelWork: chalk.white.bold("       Work:"),
-    labelTwitter: chalk.white.bold("    Twitter:"),
+    labelTelegram: chalk.white.bold("    Telegram:"),
     labelGitHub: chalk.white.bold("     GitHub:"),
     labelLinkedIn: chalk.white.bold("   LinkedIn:"),
     labelWeb: chalk.white.bold("        Web:"),
@@ -104,7 +81,7 @@ const me = boxen(
         ``,
         `${data.labelWork}  ${data.work}`,
         ``,
-        `${data.labelTwitter}  ${data.twitter}`,
+        `${data.labelTelegram}  ${data.telegram}`,
         `${data.labelGitHub}  ${data.github}`,
         `${data.labelLinkedIn}  ${data.linkedin}`,
         `${data.labelWeb}  ${data.web}`,

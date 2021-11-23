@@ -27,7 +27,6 @@ const {
     personal_site,
     npx_card_handle,
     job_title,
-    resume_url,
 } = user_data;
 
 const prompt = inquirer.createPromptModule();

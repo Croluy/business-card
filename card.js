@@ -70,8 +70,8 @@ const data = {
     labelLanguages: chalk.white.bold("Programming Languages:"),
     labelTelegram: chalk.white.bold("         Telegram:"),
     labelGitHub: chalk.white.bold("       GitHub:"),
-    labelSteam: chalk.white.bold("      Steam:"),
-    labelDiscord: chalk.white.bold("                Discord:"),
+    labelSteam: chalk.white.bold("  Steam:"),
+    labelDiscord: chalk.white.bold("              Discord:"),
     labelCard: chalk.white.bold("              Card:"),
 };
 

@@ -21,11 +21,10 @@ const {
     user_name,
     user_email,
     telegram_username,
-    linkedin_username,
     github_username,
-    personal_site,
     npx_card_handle,
     job_title,
+    languages,
 } = user_data;
 
 const prompt = inquirer.createPromptModule();
@@ -61,11 +60,13 @@ const data = {
     telegram: chalk.gray("https://t.me/") + chalk.cyan(`${telegram_username}`),
     github: chalk.gray("https://github.com/") + chalk.green(`${github_username}`),
     npx: chalk.red("npx") + " " + chalk.white(`${npx_card_handle}`),
+    languages: chalk.white(`${languages}`),
 
     labelWork: chalk.white.bold("       Info:"),
-    labelTelegram: chalk.white.bold("    Telegram:"),
+    labelLanguages: chalk.white.bold(" Programming Languages:"),
+    labelTelegram: chalk.white.bold("      Telegram:"),
     labelGitHub: chalk.white.bold("     GitHub:"),
-    labelCard: chalk.white.bold("       Card:"),
+    labelCard: chalk.white.bold("             Card:"),
 };
 
 const me = boxen(
@@ -74,12 +75,14 @@ const me = boxen(
         ``,
         `${data.labelWork}  ${data.work}`,
         ``,
+        `${data.labelLanguages}  ${data.languages}`,
+        ``,
         `${data.labelTelegram}  ${data.telegram}`,
         `${data.labelGitHub}  ${data.github}`,
         ``,
         `${data.labelCard}  ${data.npx}`,
         ``,
-        `${chalk.italic("I am currently looking for new opportunities,")}`,
+        `${chalk.italic("I'm always seeking new opportunities,")}`,
         `${chalk.italic("my inbox is always open. Whether you have a")}`,
         `${chalk.italic("question or just want to say hi, I will try ")}`,
         `${chalk.italic("my best to get back to you!")}`,

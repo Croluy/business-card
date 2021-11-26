@@ -56,7 +56,7 @@ const questions = [
 ];
 
 const data = {
-    name: chalk.bold.green(`                     ${user_name}`),
+    name: chalk.bold.green(`                      ${user_name}`),
     work: `${chalk.white(`${job_title}`)}`,
     telegram: chalk.cyan("https://t.me/") + chalk.cyan(`${telegram_username}`),
     github: chalk.cyan("https://github.com/") + chalk.cyan(`${github_username}`),
@@ -67,12 +67,12 @@ const data = {
     pgp: chalk.blue(`${pgp_key}`),
 
     labelWork: chalk.white.bold("        Info:"),
-    labelLanguages: chalk.white.bold("Programming Languages:"),
-    labelTelegram: chalk.white.bold("         Telegram:"),
-    labelGitHub: chalk.white.bold("       GitHub:"),
-    labelSteam: chalk.white.bold("  Steam:"),
+    labelLanguages: chalk.white.bold("  Programming Languages:"),
+    labelTelegram: chalk.white.bold("          Telegram:"),
+    labelGitHub: chalk.white.bold("        GitHub:"),
+    labelSteam: chalk.white.bold("   Steam:"),
     labelDiscord: chalk.white.bold("               Discord:"),
-    labelCard: chalk.white.bold("                Card:"),
+    labelCard: chalk.white.bold("                 Card:"),
     labelPgp: chalk.white.bold("               PGP Key FingerPrint:"),
 };
 
@@ -94,10 +94,10 @@ const me = boxen(
         ``,
         `${data.labelCard} ${data.npx}`,
         ``,
-        `${chalk.italic("I'm always seeking new opportunities, my inbox")}`,
-        `${chalk.italic("is always open. Whether you have a question or")}`,
-        `${chalk.italic("just want to say hi, I will try my best to get")}`,
-        `${chalk.italic("back to you!")}`,
+        `${chalk.italic("  I'm always seeking new opportunities, my inbox")}`,
+        `${chalk.italic("  is always open. Whether you have a question or")}`,
+        `${chalk.italic("  just want to say hi, I will try my best to get")}`,
+        `${chalk.italic("  back to you!")}`,
     ].join("\n"),
     {
         margin: 1,

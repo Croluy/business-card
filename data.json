@@ -7,5 +7,6 @@
     "github_username": "croluy",
     "steam_username": "croluy",
     "discord_username": "Croluy#4381",
-    "languages": ["C", "C++", "Java", "JS", "PHP", "Python"]
+    "languages": ["C", "C++", "Java", "JS", "PHP", "Python"],
+    "pgp_key": "761C 7FA6 AF0D 13F9 EEB0  5ECA B1C9 0A72 9E1E 61FA"
 }

@@ -27,6 +27,7 @@ const {
     steam_username,
     discord_username,
     languages,
+    pgp_key,
 } = user_data;
 
 const prompt = inquirer.createPromptModule();
@@ -65,6 +66,7 @@ const data = {
     discord: chalk.green(`${discord_username}`),
     npx: chalk.red("npx") + " " + chalk.white(`${npx_card_handle}`),
     languages: chalk.blue(`${languages}`),
+    pgp: chalk.blue(`${pgp_key}`),
 
     labelWork: chalk.white.bold("        Info:"),
     labelLanguages: chalk.white.bold("Programming Languages:"),
@@ -73,6 +75,7 @@ const data = {
     labelSteam: chalk.white.bold("  Steam:"),
     labelDiscord: chalk.white.bold("              Discord:"),
     labelCard: chalk.white.bold("              Card:"),
+    labelPgp: chalk.white.bold("  PGP Key:"),
 };
 
 const me = boxen(
@@ -87,6 +90,8 @@ const me = boxen(
         `${data.labelGitHub}  ${data.github}`,
         `${data.labelSteam}  ${data.steam}`,
         `${data.labelDiscord} ${data.discord}`,
+        ``,
+        `${data.labelPgp} ${data.pgp}`,
         ``,
         `${data.labelCard}  ${data.npx}`,
         ``,

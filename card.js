@@ -67,7 +67,7 @@ const data = {
     pgp: chalk.blue(`${pgp_key}`),
 
     labelWork: chalk.white.bold("        Info:"),
-    labelLanguages: chalk.white.bold("  Programming Languages:"),
+    labelLanguages: chalk.white.bold(" Programming Languages:"),
     labelTelegram: chalk.white.bold("          Telegram:"),
     labelGitHub: chalk.white.bold("        GitHub:"),
     labelSteam: chalk.white.bold("   Steam:"),

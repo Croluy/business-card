@@ -73,8 +73,8 @@ const data = {
     labelTelegram: chalk.white.bold("         Telegram:"),
     labelGitHub: chalk.white.bold("       GitHub:"),
     labelSteam: chalk.white.bold("  Steam:"),
-    labelDiscord: chalk.white.bold("              Discord:"),
-    labelCard: chalk.white.bold("              Card:"),
+    labelDiscord: chalk.white.bold("               Discord:"),
+    labelCard: chalk.white.bold("                Card:"),
     labelPgp: chalk.white.bold("               PGP Key FingerPrint:"),
 };
 

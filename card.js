@@ -38,15 +38,13 @@ const questions = [
         name: "action",
         message: "What do you wish to do next?",
         choices: [
-            //// Send an email
             {
-                name: `Send me an ${chalk.green.bold("email")}?`,
+                name: `Send me an email?`,
                 value: () => {
                     open(`mailto:${user_email}`);
                     console.log("\nAwesome, see you soon at inbox.\n");
                 },
             },
-            //// Quit
             {
                 name: "Quit this menu.",
                 value: () => {

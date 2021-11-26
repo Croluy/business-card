@@ -75,7 +75,7 @@ const data = {
     labelSteam: chalk.white.bold("  Steam:"),
     labelDiscord: chalk.white.bold("              Discord:"),
     labelCard: chalk.white.bold("              Card:"),
-    labelPgp: chalk.white.bold("            PGP Key:"),
+    labelPgp: chalk.white.bold("                      PGP Key:"),
 };
 
 const me = boxen(
@@ -96,10 +96,10 @@ const me = boxen(
         ``,
         `${data.labelCard} ${data.npx}`,
         ``,
-        `${chalk.italic("I'm always seeking new opportunities,")}`,
-        `${chalk.italic("my inbox is always open. Whether you have a")}`,
-        `${chalk.italic("question or just want to say hi, I will try ")}`,
-        `${chalk.italic("my best to get back to you!")}`,
+        `${chalk.italic("I'm always seeking new opportunities, my inbox")}`,
+        `${chalk.italic("is always open. Whether you have a question or")}`,
+        `${chalk.italic("just want to say hi, I will try my best to get")}`,
+        `${chalk.italic("back to you!")}`,
     ].join("\n"),
     {
         margin: 1,

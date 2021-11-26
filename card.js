@@ -75,7 +75,7 @@ const data = {
     labelSteam: chalk.white.bold("  Steam:"),
     labelDiscord: chalk.white.bold("              Discord:"),
     labelCard: chalk.white.bold("              Card:"),
-    labelPgp: chalk.white.bold(" PGP Key:"),
+    labelPgp: chalk.white.bold("            PGP Key:"),
 };
 
 const me = boxen(
@@ -91,7 +91,8 @@ const me = boxen(
         `${data.labelSteam}  ${data.steam}`,
         `${data.labelDiscord} ${data.discord}`,
         ``,
-        `${data.labelPgp} ${data.pgp}`,
+        `${data.labelPgp}`,
+        `${data.pgp}`,
         ``,
         `${data.labelCard} ${data.npx}`,
         ``,

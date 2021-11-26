@@ -93,7 +93,7 @@ const me = boxen(
         ``,
         `${data.labelPgp} ${data.pgp}`,
         ``,
-        `${data.labelCard}  ${data.npx}`,
+        `${data.labelCard} ${data.npx}`,
         ``,
         `${chalk.italic("I'm always seeking new opportunities,")}`,
         `${chalk.italic("my inbox is always open. Whether you have a")}`,

@@ -39,7 +39,7 @@ const prompt = inquirer.createPromptModule();
 const terminal_colour = chalk.hex('#FFFFFF');
 
 const data = {
-    pgp_message: terminal_colour("\nAlso feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + terminal_colour(".\n-Croluy\n"),
+    pgp_message: terminal_colour("Also feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + terminal_colour(".\n-Croluy\n"),
 
     name: chalk.bold.green(`                      ${user_name}`),
     work: `${terminal_colour(`${job_title}`)}`,
@@ -71,7 +71,7 @@ const questions = [
                 name: `Send me an email?`,
                 value: () => {
                     open(`mailto:${user_email}`);
-                    console.log("\nAwesome, see you soon at inbox.\n-Croluy\n");
+                    console.log("Awesome, see you soon at inbox.\n-Croluy\n");
                 },
             },
             {

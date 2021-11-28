@@ -37,7 +37,7 @@ const {
 const prompt = inquirer.createPromptModule();
 
 const data = {
-    pgp_message: chalk.white("\nAlso feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + chalk.white(".\n-Croluy\n"),
+    pgp_message: chalk.default("\nAlso feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + chalk.default(".\n-Croluy\n"),
 
     name: chalk.bold.green(`                      ${user_name}`),
     work: `${chalk.white(`${job_title}`)}`,

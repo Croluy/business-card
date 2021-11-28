@@ -48,10 +48,10 @@ const questions = [
                 },
             },
             {
-                name: `Download my PGP public key`,
+                name: `Download my PGP Key.`,
                 value: () => {
                     open(`${pgp_keyserver_ubuntu}`);
-                    console.log("\nThere you go.\nI'd be glad if you would take the time to sign my key too.\n-Croluy\n");
+                    console.log("\nAlso feel free to sign my key and reupload it.\n-Croluy\n");
                 },
             },
             {

@@ -9,8 +9,6 @@ const clear = require("clear");
 const open = require("open");
 const fs = require("fs");
 const path = require("path");
-const ora = require("ora");
-const cliSpinners = require("cli-spinners");
 
 clear();
 

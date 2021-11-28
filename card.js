@@ -36,16 +36,18 @@ const {
 
 const prompt = inquirer.createPromptModule();
 
+const terminal_colour = chalk.hex('#FFFFFF');
+
 const data = {
-    pgp_message: chalk.default("\nAlso feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + chalk.default(".\n-Croluy\n"),
+    pgp_message: terminal_colour("\nAlso feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + terminal_colour(".\n-Croluy\n"),
 
     name: chalk.bold.green(`                      ${user_name}`),
-    work: `${chalk.white(`${job_title}`)}`,
+    work: `${terminal_colour(`${job_title}`)}`,
     telegram: chalk.cyan("https://t.me/") + chalk.cyan(`${telegram_username}`),
     github: chalk.cyan("https://github.com/") + chalk.cyan(`${github_username}`),
     steam: chalk.cyan("https://steamcommunity.com/id/") + chalk.cyan(`${steam_username}`),
     discord: chalk.green(`${discord_username}`),
-    npx: chalk.red("npx") + " " + chalk.white(`${npx_card_handle}`),
+    npx: chalk.red("npx") + " " + terminal_colour(`${npx_card_handle}`),
     languages: chalk.blue(`${languages}`),
     pgp: chalk.blue(`${pgp_key}`),
 

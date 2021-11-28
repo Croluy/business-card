@@ -53,7 +53,7 @@ const questions = [
                 name: `Download my PGP Key.`,
                 value: () => {
                     open(`${pgp_pk_openpgp}`);
-                    console.log("\nAlso feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + console.log(".\n-Croluy\n");
+                    console.log(`\nAlso feel free to sign my key and reupload it somewhere like: ${pgp_upload}.\n-Croluy\n`);
                 },
             },
             {

@@ -76,8 +76,6 @@ const questions = [
                 name: `Download my PGP Key.`,
                 value: () => {
                     open(`${pgp_pk_openpgp}`);
-                    console.log("chalk.white('\nAlso feel free to sign my key and reupload it somewhere like: ') + chalk.cyan(`${pgp_upload}`) + chalk.white('.\n-Croluy\n')");
-                    console.log("chalk.white('\nAlso feel free to sign my key and reupload it somewhere like: ') + chalk.cyan(`https://keyserver.ubuntu.com/#submitKey`) + chalk.white('.\n-Croluy\n')");
                     console.log(`${data.pgp_message}`);
                 },
             },

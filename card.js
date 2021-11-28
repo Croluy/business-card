@@ -30,6 +30,7 @@ const {
     pgp_key,
     pgp_keyserver_ubuntu,
     pgp_pk_ubuntu,
+    pgp_pk_openpgp,
 } = user_data;
 
 const prompt = inquirer.createPromptModule();
@@ -50,7 +51,7 @@ const questions = [
             {
                 name: `Download my PGP Key.`,
                 value: () => {
-                    open(`${pgp_keyserver_ubuntu}`);
+                    open(`${pgp_pk_openpgp}`);
                     console.log("\nAlso feel free to sign my key and reupload it.\n-Croluy\n");
                 },
             },

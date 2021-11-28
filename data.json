@@ -10,7 +10,6 @@
     "languages": ["C", "C++", "Java", "JS", "PHP", "Python"],
     "pgp_key": "DC4B 6C3F C267 6A33 4FA6  C184 11CB 4633 9D28 DDD8",
     "pgp_keyserver_ubuntu": "https://keyserver.ubuntu.com/pks/lookup?search=0xDC4B6C3FC2676A334FA6C18411CB46339D28DDD8&fingerprint=on&op=index",
-    "pgp_pk_ubuntu": "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xdc4b6c3fc2676a334fa6c18411cb46339d28ddd8",
     "pgp_pk_openpgp": "https://keys.openpgp.org/vks/v1/by-fingerprint/DC4B6C3FC2676A334FA6C18411CB46339D28DDD8",
     "pgp_upload": "https://keyserver.ubuntu.com/#submitKey"
 }

@@ -27,7 +27,6 @@ const {
     languages,
     pgp_key,
     pgp_keyserver_ubuntu,
-    pgp_pk_ubuntu,
     pgp_pk_openpgp,
     pgp_upload,
 } = user_data;

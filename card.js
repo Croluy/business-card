@@ -36,37 +36,9 @@ const {
 
 const prompt = inquirer.createPromptModule();
 
-const questions = [
-    {
-        type: "list",
-        name: "action",
-        message: "What do you wish to do next?",
-        choices: [
-            {
-                name: `Send me an email?`,
-                value: () => {
-                    open(`mailto:${user_email}`);
-                    console.log("\nAwesome, see you soon at inbox.\n-Croluy\n");
-                },
-            },
-            {
-                name: `Download my PGP Key.`,
-                value: () => {
-                    open(`${pgp_pk_openpgp}`);
-                    console.log(`%c\nAlso feel free to sign my key and reupload it somewhere like: `+`%c${pgp_upload}`+`%c.\n-Croluy\n`,`color:white;`,`color:cyan;`,`color:white;`);
-                },
-            },
-            {
-                name: "Quit this menu.",
-                value: () => {
-                    console.log("Thanks for dropping by.\n-Croluy\n");
-                },
-            },
-        ],
-    },
-];
-
 const data = {
+    pgp_message: chalk.white("\nAlso feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + chalk.white(".\n-Croluy\n"),
+
     name: chalk.bold.green(`                      ${user_name}`),
     work: `${chalk.white(`${job_title}`)}`,
     telegram: chalk.cyan("https://t.me/") + chalk.cyan(`${telegram_username}`),
@@ -86,6 +58,37 @@ const data = {
     labelCard: chalk.white.bold("                 Card:"),
     labelPgp: chalk.white.bold("               PGP Key FingerPrint:"),
 };
+
+const questions = [
+    {
+        type: "list",
+        name: "action",
+        message: "What do you wish to do next?",
+        choices: [
+            {
+                name: `Send me an email?`,
+                value: () => {
+                    open(`mailto:${user_email}`);
+                    console.log("\nAwesome, see you soon at inbox.\n-Croluy\n");
+                },
+            },
+            {
+                name: `Download my PGP Key.`,
+                value: () => {
+                    open(`${pgp_pk_openpgp}`);
+                    console.log(`%c\nAlso feel free to sign my key and reupload it somewhere like: `+`%c${pgp_upload}`+`%c.\n-Croluy\n`,`color:white;`,`color:cyan;`,`color:white;`);
+                    console.log(`${data.pgp_message}`);
+                },
+            },
+            {
+                name: "Quit this menu.",
+                value: () => {
+                    console.log("Thanks for dropping by.\n-Croluy\n");
+                },
+            },
+        ],
+    },
+];
 
 const me = boxen(
     [

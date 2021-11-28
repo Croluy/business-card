@@ -28,7 +28,8 @@ const {
     discord_username,
     languages,
     pgp_key,
-    pgp_keyserver,
+    pgp_keyserver_ubuntu,
+    pgp_pk_ubuntu,
 } = user_data;
 
 const prompt = inquirer.createPromptModule();
@@ -43,14 +44,14 @@ const questions = [
                 name: `Send me an email?`,
                 value: () => {
                     open(`mailto:${user_email}`);
-                    console.log("\nAwesome, see you soon at inbox.\n");
+                    console.log("\nAwesome, see you soon at inbox.\n-Croluy\n");
                 },
             },
             {
                 name: `Download my PGP public key`,
                 value: () => {
-                    open(`${pgp_keyserver}`);
-                    console.log("\nThere you go.\n");
+                    open(`${pgp_keyserver_ubuntu}`);
+                    console.log("\nThere you go.\nI'd be glad if you would take the time to sign my key too.\n-Croluy\n");
                 },
             },
             {

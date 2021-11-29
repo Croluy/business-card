@@ -42,7 +42,9 @@ const prompt = inquirer.createPromptModule();
 const defaultc = chalk.hex('#FFFFFF');
 
 const data = {
+    email_message: defaultc("Awesome, see you soon at inbox.\n-Croluy\n"),
     pgp_message: defaultc("Also feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + defaultc(".\n-Croluy\n"),
+    quit_message: defaultc("Thanks for dropping by.\n-Croluy\n"),
 
     name: chalk.bold.green(`                      ${user_name}`),
     work: `${defaultc(`${job_title}`)}`,
@@ -76,7 +78,7 @@ const questions = [
                 name: `Send me an email?`,
                 value: () => {
                     open(`mailto:${user_email}`);
-                    console.log("Awesome, see you soon at inbox.\n-Croluy\n");
+                    console.log(`${data.email_message}`);
                 },
             },
             {
@@ -89,7 +91,7 @@ const questions = [
             {
                 name: "Quit this menu.",
                 value: () => {
-                    console.log("Thanks for dropping by.\n-Croluy\n");
+                    console.log(`${data.quit_message}`);
                 },
             },
         ],

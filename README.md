@@ -19,6 +19,7 @@ npx croluy
 <br/>
 
 <strong>💡 Infos about this code</strong>
+
 The code you'll find here is generated from [another template](https://github.com/rahi-khan/npx_card).
 And that template was generated, by tewaking [another repo](https://github.com/anmol098/npx_card).
 Even that repo was not 100% original but instead created using [this guide](https://studioelsa.se/blog/open-source-oss-npx-business-card/) by [@jack boreg](https://github.com/jackboberg).

@@ -31,6 +31,12 @@ const {
     pgp_upload,
 } = user_data;
 
+const res_v = fs.readFileSync(path.resolve(__dirname, "package.json"));
+const package_data = JSON.parse(res_v);
+const {
+    version,
+} = package_data;
+
 const prompt = inquirer.createPromptModule();
 
 const defaultc = chalk.hex('#FFFFFF');
@@ -43,10 +49,11 @@ const data = {
     telegram: chalk.cyan("https://t.me/") + chalk.cyan(`${telegram_username}`),
     github: chalk.cyan("https://github.com/") + chalk.cyan(`${github_username}`),
     steam: chalk.cyan("https://steamcommunity.com/id/") + chalk.cyan(`${steam_username}`),
-    discord: chalk.green(`${discord_username}`),
-    npx: chalk.red("npx") + " " + defaultc(`${npx_card_handle}`),
+    discord: chalk.cyan(`${discord_username}`),
+    npx: chalk.blue("npx") + " " + defaultc(`${npx_card_handle}`),
     languages: chalk.blue(`${languages}`),
     pgp: chalk.blue(`${pgp_key}`),
+    ver: chalk.green.bold(`${version}`),
 
     labelWork: chalk.white.bold("        Info:"),
     labelLanguages: chalk.white.bold(" Programming Languages:"),
@@ -56,6 +63,7 @@ const data = {
     labelDiscord: chalk.white.bold("               Discord:"),
     labelCard: chalk.white.bold("                 Card:"),
     labelPgp: chalk.white.bold("               PGP Key FingerPrint:"),
+    labelVer: chalk.green.bold("                                        v."),
 };
 
 const questions = [
@@ -99,7 +107,7 @@ const me = boxen(
         `${data.labelTelegram}  ${data.telegram}`,
         `${data.labelGitHub}  ${data.github}`,
         `${data.labelSteam}  ${data.steam}`,
-        `${data.labelDiscord} ${data.discord}`,
+        `${data.labelDiscord}  ${data.discord}`,
         ``,
         `${data.labelPgp}`,
         `${data.pgp}`,
@@ -110,6 +118,8 @@ const me = boxen(
         `${chalk.italic("  is always open. Whether you have a question or")}`,
         `${chalk.italic("  just want to say hi, I will try my best to get")}`,
         `${chalk.italic("  back to you!")}`,
+        ``,
+        `${data.labelVer}  ${data.ver}`,
     ].join("\n"),
     {
         margin: 1,

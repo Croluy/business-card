@@ -20,8 +20,8 @@ npx croluy
 
 ### <strong>💡 Infos about this code</strong>
 
-The code you'll find here is generated from [another template](https://github.com/rahi-khan/npx_card).
-And that template was generated, by tewaking [another repo](https://github.com/anmol098/npx_card).
+The code you'll find here is generated from [this template](https://github.com/rahi-khan/npx_card).
+And the template was created, by tewaking [another repo](https://github.com/anmol098/npx_card).
 Even that repo was not 100% original but instead created using [this guide](https://studioelsa.se/blog/open-source-oss-npx-business-card/) by [@jackboreg](https://github.com/jackboberg/).
 And who knows who gave Jack the inspiration to create that guide.
 

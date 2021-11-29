@@ -29,6 +29,6 @@ You get where I'm going with this.
 All of this basically means that the Business Card type of presentation was never my original idea.
 I just took other people's code and personalized it for my taste.
 
-If you are going to do the same, just remember to credit anyone that you forked the repo from. Might it be me or [Rahi Khan](https://github.com/rahi-khan/) or [Anmol098](https://github.com/anmol098/) or [Jack Boreg](https://github.com/jackboberg) or anyone else.
+If you are going to do the same, just remember to credit anyone that you forked the repo from. Might it be [me](https://github.com/Croluy) or [Rahi Khan](https://github.com/rahi-khan/) or [Anmol098](https://github.com/anmol098/) or [Jack Boreg](https://github.com/jackboberg) or anyone else.
 
 Thank you 🌟

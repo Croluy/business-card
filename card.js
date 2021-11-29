@@ -40,20 +40,25 @@ const {
 const prompt = inquirer.createPromptModule();
 
 const defaultc = chalk.hex('#FFFFFF');
+const text = chalk.italic;
 
 const data = {
+    question: defaultc("What do you wish to do next?"),
+    email_q: defaultc("Send me an email?"),
     email_message: defaultc("Awesome, see you soon at inbox.\n-Croluy\n"),
+    pgp_q: defaultc("Download my PGP Key."),
     pgp_message: defaultc("Also feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + defaultc(".\n-Croluy\n"),
+    quit_q: defaultc("Quit this menu."),
     quit_message: defaultc("Thanks for dropping by.\n-Croluy\n"),
 
     name: chalk.bold.green(`                      ${user_name}`),
     work: `${defaultc(`${job_title}`)}`,
+    languages: chalk.blue(`${languages}`),
     telegram: chalk.cyan("https://t.me/") + chalk.cyan(`${telegram_username}`),
     github: chalk.cyan("https://github.com/") + chalk.cyan(`${github_username}`),
     steam: chalk.cyan("https://steamcommunity.com/id/") + chalk.cyan(`${steam_username}`),
     discord: chalk.cyan(`${discord_username}`),
     npx: chalk.blue("npx") + " " + defaultc(`${npx_card_handle}`),
-    languages: chalk.blue(`${languages}`),
     pgp: chalk.blue(`${pgp_key}`),
     ver: chalk.green.bold(`${version}`),
 
@@ -66,30 +71,35 @@ const data = {
     labelCard: chalk.white.bold("                 Card:"),
     labelPgp: chalk.white.bold("               PGP Key FingerPrint:"),
     labelVer: chalk.green.bold("                                        v."),
+
+    message_line1: text("  I'm always seeking new opportunities, my inbox"),
+    message_line2: text("  is always open. Whether you have a question or"),
+    message_line3: text("  just want to say hi, I will try my best to get"),
+    message_line4: text("  back to you!"),
 };
 
 const questions = [
     {
         type: "list",
         name: "action",
-        message: "What do you wish to do next?",
+        message: `${data.question}`,
         choices: [
             {
-                name: `Send me an email?`,
+                name: `${data.email_q}`,
                 value: () => {
                     open(`mailto:${user_email}`);
                     console.log(`${data.email_message}`);
                 },
             },
             {
-                name: `Download my PGP Key.`,
+                name: `${data.pgp_q}`,
                 value: () => {
                     open(`${pgp_pk_openpgp}`);
                     console.log(`${data.pgp_message}`);
                 },
             },
             {
-                name: "Quit this menu.",
+                name: `${data.quit_q}`,
                 value: () => {
                     console.log(`${data.quit_message}`);
                 },
@@ -116,10 +126,10 @@ const me = boxen(
         ``,
         `${data.labelCard} ${data.npx}`,
         ``,
-        `${chalk.italic("  I'm always seeking new opportunities, my inbox")}`,
-        `${chalk.italic("  is always open. Whether you have a question or")}`,
-        `${chalk.italic("  just want to say hi, I will try my best to get")}`,
-        `${chalk.italic("  back to you!")}`,
+        `${data.message_line1}`,
+        `${data.message_line2}`,
+        `${data.message_line3}`,
+        `${data.message_line4}`,
         ``,
         `${data.labelVer}  ${data.ver}`,
     ].join("\n"),

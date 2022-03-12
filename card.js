@@ -53,7 +53,7 @@ const data = {
     quit_message: defaultc("Thanks for dropping by.\n-Croluy\n"),
 
     name: chalk.bold.green(`                      ${user_name}`),
-    work: `${defaultc(`${job_title}`)}`,
+    work: ` ${defaultc(`${job_title}`)}`,
     languages: chalk.blue(`${languages}`),
     telegram: chalk.cyan("https://t.me/") + chalk.cyan(`${telegram_username}`),
     twitter: chalk.cyan("https://twitter.com/") + chalk.cyan(`${twitter_username}`),
@@ -64,8 +64,9 @@ const data = {
     pgp: chalk.blue(`${pgp_key}`),
     ver: chalk.green.bold(`${version}`),
 
-    labelWork: chalk.white.bold("        Info:"),
-    labelLanguages: chalk.white.bold(" Programming Languages:"),
+    labelWork: chalk.white.bold("Info:"),
+    labelLanguages: chalk.white.bold(" Programming Languages:"),    //OLD Format x-4.0.7
+    labelLinks: chalk.blue("                   Useful Links"),      //NEW Format 4.0.8-x
     labelTelegram: chalk.white.bold("          Telegram:"),
     labelTwitter: chalk.white.bold("       Twitter:"),
     labelGitHub: chalk.white.bold("        GitHub:"),
@@ -115,9 +116,11 @@ const me = boxen(
     [
         `${data.name}`,
         ``,
-        `${data.labelWork}  ${data.work}`,
+        //`${data.labelWork}  ${data.work}`,            //OLD Format x-4.0.7
+        `${data.work}`,                                 //NEW Format 4.0.8-x
         ``,
-        `${data.labelLanguages}  ${data.languages}`,
+        //`${data.labelLanguages}  ${data.languages}`,  //OLD Format x-4.0.7
+        `${data.labelLinks}`,                           //NEW Format 4.0.8-x
         ``,
         `${data.labelTelegram}  ${data.telegram}`,
         `${data.labelTwitter}  ${data.twitter}`,
@@ -128,8 +131,8 @@ const me = boxen(
         `${data.labelPgp}`,
         `${data.pgp}`,
         ``,
-        `${data.labelCard} ${data.npx}`,
-        ``,
+        //`${data.labelCard} ${data.npx}`,              //OLD Format x-4.0.7
+        //``,
         `${data.message_line1}`,
         `${data.message_line2}`,
         `${data.message_line3}`,

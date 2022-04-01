@@ -1,6 +1,6 @@
 {
     "name": "croluy",
-    "version": "4.1.3",
+    "version": "4.1.4",
     "author": "Croluy <croluy@fbi.ac>",
     "description": "A personal card for Croluy",
     "main": "card.js",

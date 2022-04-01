@@ -30,6 +30,9 @@ const {
     pgp_keyserver_ubuntu,
     pgp_pk_openpgp,
     pgp_upload,
+    btc_address,
+    eth_address,
+    monero_address
 } = user_data;
 
 const res_v = fs.readFileSync(path.resolve(__dirname, "package.json"));
@@ -49,6 +52,8 @@ const data = {
     email_message: defaultc("Awesome, see you soon at inbox.\n-Croluy\n"),
     pgp_q: defaultc("Download my PGP Key."),
     pgp_message: defaultc("Also feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + defaultc(".\n-Croluy\n"),
+    tip_q: defaultc("Send a tip."),
+    tip_message: defaultc("I\'d really apprectiate the opportunity to thank you personally. So please get in touch with me whenever you get the chance.\nYou have all my contacts above.\n\nBitcoin Address:\t") + chalk.cyan(`${btc_address}`) + defaultc("\nEthereum Address:\t") + chalk.cyan(`${eth_address}`) + defaultc("\nMonero Address:\t") + chalk.cyan(`${monero_address}`) + defaultc("\n\nThank you very much for your kind support!\n-Croluy"),
     quit_q: defaultc("Quit this menu."),
     quit_message: defaultc("Thanks for dropping by.\n-Croluy\n"),
 
@@ -100,6 +105,12 @@ const questions = [
                 value: () => {
                     open(`${pgp_pk_openpgp}`);
                     console.log(`${data.pgp_message}`);
+                },
+            },
+            {
+                name: `${data.tip_q}`,
+                value: () => {
+                    console.log(`${data.tip_message}`);
                 },
             },
             {

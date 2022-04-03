@@ -53,7 +53,7 @@ const data = {
     pgp_q: defaultc("Download my PGP Key."),
     pgp_message: defaultc("Also feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + defaultc(".\n-Croluy\n"),
     tip_q: defaultc("Send me a tip."),
-    tip_message: defaultc("I\'d really apprectiate the opportunity to thank you personally. So please get in touch with me whenever you get the chance.\nYou have all my contacts above.\n\nBitcoin Address:\t") + chalk.cyan(`${btc_address}`) + defaultc("\nEthereum Address:\t") + chalk.cyan(`${eth_address}`) + defaultc("\nMonero Address:\t") + chalk.cyan(`${monero_address}`) + defaultc("\n\nThank you very much for your kind support!\n-Croluy"),
+    tip_message: defaultc("I\'d really apprectiate the opportunity to thank you personally. So please get in touch with me whenever you get the chance.\nYou have all my contacts above.\n\nBitcoin Address:\t") + chalk.cyan(`${btc_address}`) + defaultc("\nEthereum Address:\t") + chalk.cyan(`${eth_address}`) + defaultc("\nMonero Address:\t") + chalk.cyan(`${monero_address}`) + defaultc("\n\nThank you very much for your kind support!\n-Croluy\n"),
     quit_q: defaultc("Quit this menu."),
     quit_message: defaultc("Thanks for dropping by.\n-Croluy\n"),
 

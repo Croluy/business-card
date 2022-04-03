@@ -1,35 +1,42 @@
 {
-    "name": "croluy",
-    "version": "1.0.0",
-    "author": "Croluy <croluy@fbi.ac>",
-    "description": "A personal card for Croluy",
-    "main": "card.js",
-    "bin": "./card.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Croluy/business-card.git"
-    },
-    "scripts": {
-        "setup": "ncu -u && npm i",
-        "start": "node card.js"
-    },
-    "dependencies": {
-        "boxen": "^5.0.0",
-        "chalk": "^4.1.0",
-        "clear": "^0.1.0",
-        "cli-spinners": "^2.5.0",
-        "inquirer": "^7.3.3",
-        "open": "^7.3.1",
-        "ora": "^5.3.0"
-    },
-    "keywords": [
-        "card",
-        "npm card",
-        "npx card",
-        "business card",
-        "croluy",
-        "croIuy",
-        "personal card"
-    ],
-    "license": "ISC"
+  "name": "croluy",
+  "version": "4.0.0",
+  "author": "Croluy <croluy@fbi.ac>",
+  "description": "A personal card for Croluy",
+  "main": "card.js",
+  "bin": {
+    "croluy": "card.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Croluy/business-card.git"
+  },
+  "scripts": {
+    "setup": "ncu -u && npm i",
+    "start": "node card.js"
+  },
+  "dependencies": {
+    "boxen": "^5.0.0",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "cli-spinners": "^2.5.0",
+    "inquirer": "^7.3.3",
+    "open": "^7.3.1",
+    "ora": "^5.3.0"
+  },
+  "keywords": [
+    "card",
+    "npm card",
+    "npx card",
+    "business card",
+    "croluy",
+    "croIuy",
+    "personal card"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Croluy/business-card/issues"
+  },
+  "homepage": "https://github.com/Croluy/business-card#readme",
+  "devDependencies": {}
 }

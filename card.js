@@ -169,6 +169,12 @@ const tip_method = [
                     console.log(`${data.tip_message}`);
                 }
             },
+            {
+                name: `${data.quit_q}`,
+                value: () => {
+                    console.log(`${data.quit_message}`);
+                },
+            },
         ],
     },
 ];

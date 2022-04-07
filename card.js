@@ -9,6 +9,7 @@ const clear = require("clear");
 const open = require("open");
 const fs = require("fs");
 const path = require("path");
+let qrcode = require('qrcode-terminal');
 
 clear();
 
@@ -48,12 +49,21 @@ const text = chalk.italic;
 
 const data = {
     question: defaultc("What do you wish to do next?"),
+    tip_method: defaultc("Which is the way you prefer to send me a tip?"),
+
     email_q: defaultc("Send me an email."),
     email_message: defaultc("Awesome, see you soon at inbox.\n-Croluy\n"),
     pgp_q: defaultc("Download my PGP Key."),
     pgp_message: defaultc("Also feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + defaultc(".\n-Croluy\n"),
     tip_q: defaultc("Send me a tip."),
-    tip_message: defaultc("I\'d really apprectiate the opportunity to thank you personally. So please get in touch with me whenever you get the chance.\nYou have all my contacts above.\n\nBitcoin Address:\t") + chalk.cyan(`${btc_address}`) + defaultc("\nEthereum Address:\t") + chalk.cyan(`${eth_address}`) + defaultc("\nMonero Address:\t") + chalk.cyan(`${monero_address}`) + defaultc("\n\nThank you very much for your kind support!\n-Croluy\n"),
+    tip_message: defaultc("\nI\'d really apprectiate the opportunity to thank you personally for your tip. So please get in touch with me whenever you get the chance.\nYou have all my contacts in the card above.\n") + defaultc("\nThank you very much for your kind support!\n-Croluy\n"),
+    tip_btc: defaultc("\nBitcoin Wallet Address:\t") + chalk.cyan(`${btc_address}`),
+    tip_btc_question: defaultc("Bitcoin (BTC)"),
+    tip_eth: defaultc("\nEthereum Wallet Address:\t") + chalk.cyan(`${eth_address}`),
+    tip_eth_question: defaultc("Ethereum (ETH)"),
+    
+    tip_monero: defaultc("\nMonero Wallet Address:\t") + chalk.cyan(`${monero_address}`),
+    tip_monero_question: defaultc("Monero (XMR)"),
     quit_q: defaultc("Quit this menu."),
     quit_message: defaultc("Thanks for dropping by.\n-Croluy\n"),
 
@@ -110,7 +120,7 @@ const questions = [
             {
                 name: `${data.tip_q}`,
                 value: () => {
-                    console.log(`${data.tip_message}`);
+                    prompt(tip_method).then(answer => answer.tip());
                 },
             },
             {
@@ -118,6 +128,46 @@ const questions = [
                 value: () => {
                     console.log(`${data.quit_message}`);
                 },
+            },
+        ],
+    },
+];
+
+const tip_method = [
+    {
+        type: "list",
+        name: "tip",
+        message: `${data.tip_method}`,
+        choices: [
+            {
+                name: `${data.tip_btc_question}`,
+                value: () => {
+                    console.log(`${data.tip_btc}`);
+                    qrcode.generate(`${btc_address}`, {small: true}, function (qrcode) {
+                        console.log("\nQR Code:\n"+qrcode);
+                    }),
+                    console.log(`${data.tip_message}`);
+                }
+            },
+            {
+                name: `${data.tip_eth_question}`,
+                value: () => {
+                    console.log(`${data.tip_eth}`);
+                    qrcode.generate(`${eth_address}`, {small: true}, function (qrcode) {
+                        console.log("\nQR Code:\n"+qrcode);
+                    }),
+                    console.log(`${data.tip_message}`);
+                }
+            },
+            {
+                name: `${data.tip_monero_question}`,
+                value: () => {
+                    console.log(`${data.tip_monero}`);
+                    qrcode.generate(`${monero_address}`, {small: true}, function (qrcode) {
+                        console.log("\nQR Code:\n"+qrcode);
+                    }),
+                    console.log(`${data.tip_message}`);
+                }
             },
         ],
     },

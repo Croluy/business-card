@@ -22,7 +22,8 @@
     "cli-spinners": "^2.5.0",
     "inquirer": "^7.3.3",
     "open": "^7.3.1",
-    "ora": "^5.3.0"
+    "ora": "^5.3.0",
+    "qrcode-terminal": "^0.12.0"
   },
   "keywords": [
     "card",
@@ -37,6 +38,5 @@
   "bugs": {
     "url": "https://github.com/Croluy/business-card/issues"
   },
-  "homepage": "https://github.com/Croluy/business-card#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/Croluy/business-card#readme"
 }

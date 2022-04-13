@@ -4,13 +4,13 @@
 ### <strong>👇 Write this in your terminal</strong>
 
 ```bash
-npx croluy@latest
+npx croluy
 ```
 <br/>
-
-If it's not the 1st time you install "croluy" package you may also only use:
+OR
+<br/>
 ```bash
-npx croluy
+npx croluy@latest
 ```
 
 <br/>

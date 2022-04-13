@@ -6,9 +6,8 @@
 ```bash
 npx croluy
 ```
-<br/>
 OR
-<br/>
+
 ```bash
 npx croluy@latest
 ```

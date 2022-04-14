@@ -15,5 +15,6 @@
     "pgp_upload": "https://keyserver.ubuntu.com/#submitKey",
     "btc_address": "bc1qmd8rtqw5kh8wqw3c8v7f7ex2rd08at0086ne5w",
     "eth_address": "0xE5a08c6734674996739F51eEE2371cd6EE076e34",
-    "monero_address":"45UBa1F5sucF9DEf2SxWbzYg6M2N921MfCxwxS2LGVX6SNj2hUs69izHJ5VHcnwvf8bPJReyXubJZFX6kevK7ZvJ39f46Ay"
+    "monero_address":"45UBa1F5sucF9DEf2SxWbzYg6M2N921MfCxwxS2LGVX6SNj2hUs69izHJ5VHcnwvf8bPJReyXubJZFX6kevK7ZvJ39f46Ay",
+    "terra_address":"terra1ye59t069kmu6c3hwks9ykkyarqdrt7pn6k8p56"
 }

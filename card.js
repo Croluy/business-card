@@ -33,6 +33,7 @@ const {
     pgp_upload,
     btc_address,
     eth_address,
+    terra_address,
     monero_address
 } = user_data;
 
@@ -61,7 +62,8 @@ const data = {
     tip_btc_question: defaultc("Bitcoin (BTC)"),
     tip_eth: defaultc("\nEthereum Wallet Address:\t") + chalk.cyan(`${eth_address}`),
     tip_eth_question: defaultc("Ethereum (ETH)"),
-    
+    tip_terra_question: defaultc("Luna (LUNA) or UST"),
+    tip_terra: defaultc("\nTerra Wallet Address:\t") + chalk.cyan(`${terra_address}`), 
     tip_monero: defaultc("\nMonero Wallet Address:\t") + chalk.cyan(`${monero_address}`),
     tip_monero_question: defaultc("Monero (XMR)"),
     quit_q: defaultc("Quit this menu."),
@@ -154,6 +156,16 @@ const tip_method = [
                 value: () => {
                     console.log(`${data.tip_eth}`);
                     qrcode.generate(`${eth_address}`, {small: true}, function (qrcode) {
+                        console.log("\nQR Code:\n"+qrcode);
+                    }),
+                    console.log(`${data.tip_message}`);
+                }
+            },
+            {
+                name: `${data.tip_terra_question}`,
+                value: () => {
+                    console.log(`${data.tip_terra}`);
+                    qrcode.generate(`${terra_address}`, {small: true}, function (qrcode) {
                         console.log("\nQR Code:\n"+qrcode);
                     }),
                     console.log(`${data.tip_message}`);

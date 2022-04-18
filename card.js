@@ -49,11 +49,12 @@ const {
 const prompt = inquirer.createPromptModule();
 
 const defaultc = chalk.hex('#FFFFFF');
+const defaultq = chalk.blue;
 const text = chalk.italic;
 
 const data = {
-    question: defaultc("What do you wish to do next?"),
-    tip_method: defaultc("Which is the way you prefer to send me a tip?"),
+    question: defaultq("What do you wish to do next?"),
+    tip_method: defaultq("Which is the way you prefer to send me a tip?"),
 
     email_q: defaultc("Send me an email."),
     email_message: defaultc("Awesome, see you soon at inbox.\n-Croluy\n"),
@@ -228,7 +229,7 @@ const tip_method = [
                 }
             },
             {
-                name: `${data.quit_q}`,
+                name: `${data.quit_q}\n`,
                 value: () => {
                     console.log(`${data.quit_message}`);
                 },

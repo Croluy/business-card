@@ -85,7 +85,7 @@ const data = {
 
     tip_osmo_question: defaultc("Osmosis (OSMO)"),
     tip_osmo: defaultc("\nOsmosis Wallet Address:\t") + chalk.cyan(`${osmo_address}`),
-    chain_atom: defaultr("Be sure to send the tip through ") + defaultq("ATOM") + defaultr(" network!\nOtherwise funds will be lost."),
+    chain_osmo: defaultr("Be sure to send the tip through ") + defaultq("ATOM") + defaultr(" network!\nOtherwise funds will be lost."),
 
     tip_juno_question: defaultc("Juno (JUNO)"),
     tip_juno: defaultc("\nJuno Wallet Address:\t") + chalk.cyan(`${juno_address}`),
@@ -209,6 +209,7 @@ const tip_method = [
             {
                 name: `${data.tip_terra_question}`,
                 value: () => {
+                    console.log(`${data.chain_terra}`);
                     console.log(`${data.tip_terra}`);
                     qrcode.generate(`${terra_address}`, {small: true}, function (qrcode) {
                         console.log("\nQR Code:\n"+qrcode);
@@ -219,6 +220,7 @@ const tip_method = [
             {
                 name: `${data.tip_atom_question}`,
                 value: () => {
+                    console.log(`${data.chain_atom}`);
                     console.log(`${data.tip_atom}`);
                     qrcode.generate(`${atom_address}`, {small: true}, function (qrcode) {
                         console.log("\nQR Code:\n"+qrcode);
@@ -229,6 +231,7 @@ const tip_method = [
             {
                 name: `${data.tip_cro_question}`,
                 value: () => {
+                    console.log(`${data.chain_cro}`);
                     console.log(`${data.tip_cro}`);
                     qrcode.generate(`${cro_address}`, {small: true}, function (qrcode) {
                         console.log("\nQR Code:\n"+qrcode);
@@ -239,6 +242,7 @@ const tip_method = [
             {
                 name: `${data.tip_osmo_question}`,
                 value: () => {
+                    console.log(`${data.chain_osmo}`);
                     console.log(`${data.tip_osmo}`);
                     qrcode.generate(`${osmo_address}`, {small: true}, function (qrcode) {
                         console.log("\nQR Code:\n"+qrcode);
@@ -249,6 +253,7 @@ const tip_method = [
             {
                 name: `${data.tip_juno_question}`,
                 value: () => {
+                    console.log(`${data.chain_juno}`);
                     console.log(`${data.tip_juno}`);
                     qrcode.generate(`${juno_address}`, {small: true}, function (qrcode) {
                         console.log("\nQR Code:\n"+qrcode);
@@ -259,6 +264,7 @@ const tip_method = [
             {
                 name: `${data.tip_kava_question}`,
                 value: () => {
+                    console.log(`${data.chain_kava}`);
                     console.log(`${data.tip_kava}`);
                     qrcode.generate(`${kava_address}`, {small: true}, function (qrcode) {
                         console.log("\nQR Code:\n"+qrcode);
@@ -269,6 +275,7 @@ const tip_method = [
             {
                 name: `${data.tip_secret_question}`,
                 value: () => {
+                    console.log(`${data.chain_secret}`);
                     console.log(`${data.tip_secret}`);
                     qrcode.generate(`${secret_address}`, {small: true}, function (qrcode) {
                         console.log("\nQR Code:\n"+qrcode);
@@ -279,6 +286,7 @@ const tip_method = [
             {
                 name: `${data.tip_akash_question}`,
                 value: () => {
+                    console.log(`${data.chain_akash}`);
                     console.log(`${data.tip_akash}`);
                     qrcode.generate(`${akash_address}`, {small: true}, function (qrcode) {
                         console.log("\nQR Code:\n"+qrcode);

@@ -54,6 +54,7 @@ const prompt = inquirer.createPromptModule();
 
 const defaultc = chalk.hex('#FFFFFF');
 const defaultq = chalk.blue;
+const defaultr = chalk.red;
 const text = chalk.italic;
 
 const data = {
@@ -72,30 +73,39 @@ const data = {
     
     tip_eth: defaultc("\nEthereum Wallet Address:\t") + chalk.cyan(`${eth_address}`),
     tip_eth_question: defaultc("Ethereum (ETH)"),
+    chain_eth: defaultr("Be sure to send the tip through ") + defaultq("ERC20") + defaultr(" network!\nOtherwise funds will be lost."),
     
     tip_terra_question: defaultc("Luna (LUNA) or UST"),
     tip_terra: defaultc("\nTerra Wallet Address:\t") + chalk.cyan(`${terra_address}`),
+    chain_terra: defaultr("Be sure to send the tip through ") + defaultq("TERRA") + defaultr(" network!\nOtherwise funds will be lost."),
 
     tip_atom_question: defaultc("Cosmos (ATOM)"),
     tip_atom: defaultc("\nCosmos Wallet Address:\t") + chalk.cyan(`${atom_address}`),
+    chain_atom: defaultr("Be sure to send the tip through ") + defaultq("ATOM") + defaultr(" network!\nOtherwise funds will be lost."),
 
     tip_osmo_question: defaultc("Osmosis (OSMO)"),
     tip_osmo: defaultc("\nOsmosis Wallet Address:\t") + chalk.cyan(`${osmo_address}`),
+    chain_atom: defaultr("Be sure to send the tip through ") + defaultq("ATOM") + defaultr(" network!\nOtherwise funds will be lost."),
 
     tip_juno_question: defaultc("Juno (JUNO)"),
     tip_juno: defaultc("\nJuno Wallet Address:\t") + chalk.cyan(`${juno_address}`),
+    chain_juno: defaultr("Be sure to send the tip through ") + defaultq("JUNO") + defaultr(" network!\nOtherwise funds will be lost."),
 
     tip_kava_question: defaultc("Kava (KAVA)"),
     tip_kava: defaultc("\nKava Wallet Address:\t") + chalk.cyan(`${kava_address}`),
+    chain_kava: defaultr("Be sure to send the tip through ") + defaultq("KAVA") + defaultr(" network!\nOtherwise funds will be lost."),
 
     tip_secret_question: defaultc("Secret (SCRT)"),
     tip_secret: defaultc("\nSecret Wallet Address:\t") + chalk.cyan(`${secret_address}`),
+    chain_secret: defaultr("Be sure to send the tip through ") + defaultq("SECRET") + defaultr(" network!\nOtherwise funds will be lost."),
 
     tip_akash_question: defaultc("Akash (AKT)"),
     tip_akash: defaultc("\nAkash Wallet Address:\t") + chalk.cyan(`${akash_address}`),
+    chain_akash: defaultr("Be sure to send the tip through ") + defaultq("AKASH") + defaultr(" network!\nOtherwise funds will be lost."),
 
     tip_cro_question: defaultc("Cronos (CRO)"),
     tip_cro: defaultc("\nCronos Wallet Address:\t") + chalk.cyan(`${cro_address}`),
+    chain_cro: defaultr("Be sure to send the tip through ") + defaultq("Crypto.org") + defaultr(" network!\nOtherwise funds will be lost."),
     
     tip_monero: defaultc("\nMonero Wallet Address:\t") + chalk.cyan(`${monero_address}`),
     tip_monero_question: defaultc("Monero (XMR)"),
@@ -188,6 +198,7 @@ const tip_method = [
             {
                 name: `${data.tip_eth_question}`,
                 value: () => {
+                    console.log(`${data.chain_eth}`);
                     console.log(`${data.tip_eth}`);
                     qrcode.generate(`${eth_address}`, {small: true}, function (qrcode) {
                         console.log("\nQR Code:\n"+qrcode);

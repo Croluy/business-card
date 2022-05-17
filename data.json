@@ -19,5 +19,9 @@
     "terra_address": "terra1ye59t069kmu6c3hwks9ykkyarqdrt7pn6k8p56",
     "atom_address": "cosmos1m0duczuvuz2jd35c9mqtlus9g5ue038emdn252",
     "osmo_address": "osmo1m0duczuvuz2jd35c9mqtlus9g5ue038enkq6zc",
-    "juno_address": "juno1m0duczuvuz2jd35c9mqtlus9g5ue038edls3nk"
+    "juno_address": "juno1m0duczuvuz2jd35c9mqtlus9g5ue038edls3nk",
+    "kava_address": "kava1m0duczuvuz2jd35c9mqtlus9g5ue038e8c8hzd",
+    "secret_address": "secret1m0duczuvuz2jd35c9mqtlus9g5ue038eeg8rfk",
+    "akash_address": "akash1m0duczuvuz2jd35c9mqtlus9g5ue038ekk7dds",
+    "cro_address": "cro1m0duczuvuz2jd35c9mqtlus9g5ue038erkmngm"
 }

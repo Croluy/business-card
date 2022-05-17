@@ -37,7 +37,11 @@ const {
     atom_address,
     osmo_address,
     juno_address,
-    monero_address
+    monero_address,
+    kava_address,
+    secret_address,
+    akash_address,
+    cro_address
 } = user_data;
 
 const res_v = fs.readFileSync(path.resolve(__dirname, "package.json"));
@@ -80,9 +84,22 @@ const data = {
 
     tip_juno_question: defaultc("Juno (JUNO)"),
     tip_juno: defaultc("\nJuno Wallet Address:\t") + chalk.cyan(`${juno_address}`),
+
+    tip_kava_question: defaultc("Kava (KAVA)"),
+    tip_kava: defaultc("\nKava Wallet Address:\t") + chalk.cyan(`${kava_address}`),
+
+    tip_secret_question: defaultc("Secret (SCRT)"),
+    tip_secret: defaultc("\nSecret Wallet Address:\t") + chalk.cyan(`${secret_address}`),
+
+    tip_akash_question: defaultc("Akash (AKT)"),
+    tip_akash: defaultc("\nAkash Wallet Address:\t") + chalk.cyan(`${akash_address}`),
+
+    tip_cro_question: defaultc("Cronos (CRO)"),
+    tip_cro: defaultc("\nCronos Wallet Address:\t") + chalk.cyan(`${cro_address}`),
     
     tip_monero: defaultc("\nMonero Wallet Address:\t") + chalk.cyan(`${monero_address}`),
     tip_monero_question: defaultc("Monero (XMR)"),
+
     quit_q: defaultc("Quit this menu."),
     quit_message: defaultc("Thanks for dropping by.\n-Croluy\n"),
 
@@ -199,6 +216,16 @@ const tip_method = [
                 }
             },
             {
+                name: `${data.tip_cro_question}`,
+                value: () => {
+                    console.log(`${data.tip_cro}`);
+                    qrcode.generate(`${cro_address}`, {small: true}, function (qrcode) {
+                        console.log("\nQR Code:\n"+qrcode);
+                    }),
+                    console.log(`${data.tip_message}`);
+                }
+            },
+            {
                 name: `${data.tip_osmo_question}`,
                 value: () => {
                     console.log(`${data.tip_osmo}`);
@@ -213,6 +240,36 @@ const tip_method = [
                 value: () => {
                     console.log(`${data.tip_juno}`);
                     qrcode.generate(`${juno_address}`, {small: true}, function (qrcode) {
+                        console.log("\nQR Code:\n"+qrcode);
+                    }),
+                    console.log(`${data.tip_message}`);
+                }
+            },
+            {
+                name: `${data.tip_kava_question}`,
+                value: () => {
+                    console.log(`${data.tip_kava}`);
+                    qrcode.generate(`${kava_address}`, {small: true}, function (qrcode) {
+                        console.log("\nQR Code:\n"+qrcode);
+                    }),
+                    console.log(`${data.tip_message}`);
+                }
+            },
+            {
+                name: `${data.tip_secret_question}`,
+                value: () => {
+                    console.log(`${data.tip_secret}`);
+                    qrcode.generate(`${secret_address}`, {small: true}, function (qrcode) {
+                        console.log("\nQR Code:\n"+qrcode);
+                    }),
+                    console.log(`${data.tip_message}`);
+                }
+            },
+            {
+                name: `${data.tip_akash_question}`,
+                value: () => {
+                    console.log(`${data.tip_akash}`);
+                    qrcode.generate(`${akash_address}`, {small: true}, function (qrcode) {
                         console.log("\nQR Code:\n"+qrcode);
                     }),
                     console.log(`${data.tip_message}`);

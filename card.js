@@ -75,8 +75,8 @@ const data = {
     tip_eth_question: defaultc("Ethereum (ETH)"),
     chain_eth: defaultr("Be sure to send the tip through ") + defaultq("ERC20") + defaultr(" network!\nOtherwise funds will be lost."),
     
-    tip_terra_question: defaultc("Luna (LUNA) or UST"),
-    tip_terra: defaultc("\nTerra Wallet Address:\t") + chalk.cyan(`${terra_address}`),
+    tip_terra_question: defaultc("Luna Classic (LUNC) or USTC"),
+    tip_terra: defaultc("\nTerra Classic Wallet Address:\t") + chalk.cyan(`${terra_address}`),
     chain_terra: defaultr("Be sure to send the tip through ") + defaultq("TERRA") + defaultr(" network!\nOtherwise funds will be lost."),
 
     tip_atom_question: defaultc("Cosmos (ATOM)"),

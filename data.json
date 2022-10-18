@@ -1,3 +1,11 @@
+/**
+ * Business Card - data.js - User data to include in main file.
+ * Copyright (C) 2022   Croluy
+ * 
+ * This program comes with ABSOLUTELY NO WARRANTY;
+ * This is free software, and you are welcome to redistribute it under certain conditions;
+ * See https://www.gnu.org/licenses/ for details.
+ */
 {
     "user_name": "Croluy",
     "user_email": "croluy@fbi.ac",

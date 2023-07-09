@@ -139,7 +139,7 @@ const data = {
     labelTwitter: chalk.white.bold("       Twitter:"),
     labelGitHub: chalk.white.bold("        GitHub:"),
     labelSteam: chalk.white.bold("   Steam:"),
-    labelDiscord: chalk.white.bold("               Discord:"),
+    labelDiscord: chalk.white.bold("                 Discord:"),
     labelCard: chalk.white.bold("                 Card:"),
     labelPgp: chalk.white.bold("               PGP Key FingerPrint:"),
     labelVer: chalk.green.bold("                                        v."),

@@ -138,7 +138,7 @@ const data = {
     quit_message: defaultc("Thanks for dropping by.\n-Croluy\n"),
 
     name: chalk.bold.green(`                      ${user_name}`),
-    work: ` ${defaultc(`${job_title}`)}`,
+    work: `           ${defaultc(`${job_title}`)}`,
     languages: chalk.blue(`${languages}`),
     telegram: chalk.cyan("https://t.me/") + chalk.cyan(`${telegram_username}`),
     twitter: chalk.cyan("https://twitter.com/") + chalk.cyan(`${twitter_username}`),

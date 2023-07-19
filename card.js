@@ -38,6 +38,10 @@ const {
     pgp_keyserver_ubuntu,
     pgp_pk_openpgp,
     pgp_upload,
+    hack_the_box_referral,
+    hack_the_box_academy,
+    htb_discord,
+    htb_academy_help,
     btc_address,
     eth_address,
     terra_address,
@@ -67,14 +71,27 @@ const text = chalk.italic;
 const data = {
     question: defaultq("What do you wish to do next?"),
     tip_method: defaultq("Which is the way you prefer to send me a tip?"),
+    hack_method: defaultq("Are you ready to jump straight into hacking or do you want to learn?"),
 
-    email_q: defaultc("Send me an email."),
+    email_q: defaultc("Send me an ") + chalk.cyan("email") + defaultc("."),
     email_message: defaultc("Awesome, see you soon at inbox.\n-Croluy\n"),
-    pgp_q: defaultc("Download my PGP Key."),
+    pgp_q: defaultc("Download my ") + chalk.cyan("PGP key") + defaultc("."),
     pgp_message: defaultc("Also feel free to sign my key and reupload it somewhere like: ") + chalk.cyan(`${pgp_upload}`) + defaultc(".\n-Croluy\n"),
-    tip_q: defaultc("Send me a tip."),
+    tip_q: defaultc("Send me a ") + chalk.cyan("tip") + defaultc("."),
     tip_message: defaultc("\nI\'d really apprectiate the opportunity to thank you personally for your tip. So please get in touch with me whenever you get the chance.\nYou have all my contacts in the card above.\n") + defaultc("\nThank you very much for your kind support!\n-Croluy\n"),
+    hack_q: defaultc("Start your ") + chalk.cyan("hacking journey") + defaultc("."),
+    hack_message: defaultc("Awesome, see you soon at Hack The Box.\nAlso join HTB Discord server: ") + chalk.cyan(`${htb_discord}`) + defaultc(".\n-Croluy\n"),
+    hack_academy_support: defaultc("\nFeel free to contact me regarding any questions you might have on HTB Academy modules.\nI will try my best to get back to you and provide you with my support.\n"),
     
+    hack_main_question: defaultc("Start hacking!"),
+    hack_main: defaultc("Join Hack The Box at: ") + chalk.cyan(`${hack_the_box_referral}\n`),
+
+    hack_academy_question: defaultc("Learn hacking!"),
+    hack_academy: defaultc("Join Hack The Box Academy at: ") + chalk.cyan(`${hack_the_box_academy}`),
+
+    hack_help_question: defaultc("What is Hack The Box?"),
+    hack_help: defaultc("Hack The Box is an online platform allowing you to test your penetration testing skills.\nHTB also has an Academy section where you can learn the main concepts of ethical hacking.\nYou can get more infos about HTB Academy at: ") + chalk.cyan(`${htb_academy_help}`) + defaultc(".\n-Croluy\n"),
+
     tip_btc: defaultc("\nBitcoin Wallet Address:\t") + chalk.cyan(`${btc_address}`),
     tip_btc_question: defaultc("Bitcoin (BTC)"),
     
@@ -114,8 +131,8 @@ const data = {
     tip_cro: defaultc("\nCronos Wallet Address:\t") + chalk.cyan(`${cro_address}`),
     chain_cro: defaultr("Be sure to send the tip through ") + defaultq("Crypto.org") + defaultr(" network!\nOtherwise funds will be lost."),
     
-    tip_monero: defaultc("\nMonero Wallet Address:\t") + chalk.cyan(`${monero_address}`),
     tip_monero_question: defaultc("Monero (XMR)"),
+    tip_monero: defaultc("\nMonero Wallet Address:\t") + chalk.cyan(`${monero_address}`),
 
     quit_q: defaultc("Quit this menu."),
     quit_message: defaultc("Thanks for dropping by.\n-Croluy\n"),
@@ -168,6 +185,12 @@ const questions = [
                 value: () => {
                     open(`${pgp_pk_openpgp}`);
                     console.log(`${data.pgp_message}`);
+                },
+            },
+            {
+                name: `${data.hack_q}`,
+                value: () => {
+                    prompt(hack_method).then(answer => answer.hack());
                 },
             },
             {
@@ -319,6 +342,37 @@ const tip_method = [
             },
         ],
     },
+];
+
+const hack_method = [
+    {
+        type: "list",
+        name: "hack",
+        message: `${data.hack_method}`,
+        choices: [
+            {
+                name: `${data.hack_main_question}`,
+                value: () => {
+                    console.log(`${data.hack_main}`);
+                    console.log(`${data.hack_message}`);
+                }
+            },
+            {
+                name: `${data.hack_academy_question}`,
+                value: () => {
+                    console.log(`${data.hack_academy}`);
+                    console.log(`${data.hack_academy_support}`);
+                    console.log(`${data.hack_message}`);
+                }
+            },
+            {
+                name: `${data.hack_help_question}`,
+                value: () => {
+                    console.log(`${data.hack_help}`);
+                }
+            },
+        ]
+    }
 ];
 
 const me = boxen(

@@ -1,5 +1,5 @@
 <h1 align="center">  <strong>My Profile</strong> </h1>
-<strong>If you have [NodeJS](https://nodejs.org/) installed, you can connect with me directly via a terminal command.</strong>
+<strong>If you have <a href="https://nodejs.org">NodeJS</a> installed, you can connect with me directly via a terminal command.</strong>
 
 ### <strong>👇 Write this in your terminal</strong>
 
